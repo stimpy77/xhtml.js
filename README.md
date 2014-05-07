@@ -1,3 +1,5 @@
+![DOM-to-XHTML](https://raw.githubusercontent.com/stimpy77/xhtml.js/master/dom-to-xhtml.png "xhtml.js DOM-to-XHTML")
+
 xhtml.js
 ========
 
