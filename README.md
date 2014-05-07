@@ -11,7 +11,7 @@ This is a migration of the same project from https://xhtmljs.codeplex.com which 
 
 XHTMLJS is a Javascript library that converts a web browser's pre-parsed DOM element into valid XHTML. This attempts to resolve the inadequacies of ELEMENT.innerHTML by providing innerXTML() and outerXHTML() to the web developer.
 
-Developers often need XHTML-compliant HTML markup when they fetch DOM elements' innerHTML. Since the W3C hasn't standardized on this property (for whatever reason) the browsers have been inconsistent in their approaches to innerHTML. Firefox doesn't put the trailing slash in <br> tags, for instance, while Internet Explorer shows tags in all-caps and strips the quotation marks from single-word attributes. 
+Developers often need XHTML-compliant HTML markup when they fetch DOM elements' innerHTML. Since the W3C hasn't standardized on this property (for whatever reason) the browsers have been inconsistent in their approaches to innerHTML. Firefox doesn't put the trailing slash in `<br>` tags, for instance, while Internet Explorer shows tags in all-caps and strips the quotation marks from single-word attributes. 
 
 This project is an attempt to alleviate the problem by creating innerXHTML() and outerXHTML() functions in Javascript. 
 
