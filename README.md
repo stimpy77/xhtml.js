@@ -15,4 +15,4 @@ Developers often need XHTML-compliant HTML markup when they fetch DOM elements' 
 
 This project is an attempt to alleviate the problem by creating innerXHTML() and outerXHTML() functions in Javascript. 
 
-The original intent was to add innerXHTML() and outerXHTML() to the prototype of Element, but Internet Explorer doesn't expose a prototype for DOM elements. The innerXHTML() and outerXHTML() functions are implemented anyway, and are added to the Element prototype for browsers that support Element prototypes. The function xhtml() for innerXHTML() equivalence is also added to jQuery. 
+The original intent was to add innerXHTML() and outerXHTML() to the prototype of Element, but Internet Explorer (2008) doesn't expose a prototype for DOM elements. The innerXHTML() and outerXHTML() functions are implemented anyway, and are added to the Element prototype for browsers that support Element prototypes. The function xhtml() for innerXHTML() equivalence is also added to jQuery. 
