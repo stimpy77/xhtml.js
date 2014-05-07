@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>XHTML Live Editor</title>
+    <script language="javascript" type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script language="javascript" type="text/javascript" src="xhtml.js"></script>
+    <script language="javascript" type="text/javascript">
+        function syncXhtml(srcTextArea, destTextArea) {
+            if (document.getElementById('cbFormatted').checked) {
+                window.xhtmlFormatting = "formatted";
+            } else {
+                window.xhtmlFormatting = "none";
+            }
+			var strictXhtml = false;
+            if (document.getElementById('cbStrict').checked) {
+                strictXhtml = true;
+            }
+            destTextArea.value=innerXHTML($('<div>' + srcTextArea.value + '</div>')[0], strictXhtml).trim();
+			
+        }
+    </script>
+</head>
+<body>
+    <div>Type HTML content (not &lt;html&gt; documents, just HTML content elements) here:</div>
+    <div><textarea id="htmlEditor" style="width: 100%; height: 250px;" 
+        onkeyup="syncXhtml(this, document.getElementById('XHTMLPreview'));"
+        onchange="syncXhtml(this, document.getElementById('XHTMLPreview'));"></textarea></div>
+     <div style="margin-top: 10px">
+        <div style="float: left">See XHTML here:</div>
+        <div style="float: right;" onclick="syncXhtml(document.getElementById('htmlEditor'), document.getElementById('XHTMLPreview'));">
+            <input type="checkbox" id="cbFormatted" checked="checked" />
+			<label for="cbFormatted">Formatted</label><br />
+			<input type="checkbox" id="cbStrict" checked="checked" />
+			<label for="cbStrict">Strict</label><br />
+			
+		</div>
+    </div>
+    <div id=""><textarea id="XHTMLPreview" style="width: 100%; height: 250px;"  readonly="readonly"></textarea></div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+
+    <title>XHTML Test</title>
+    <script language="javascript" type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script language="javascript" type="text/javascript" src="xhtml.js"></script>
+    <script language="javascript" type="text/javascript">
+        window.onload = function() {
+            var elName = "testElement";
+            var el = document.getElementById(elName);
+            alert("jQuery:\n\n" + $("#testElement").xhtml());
+            if (!document.all) {
+                alert("testElement.outerXHTML():\n\n" + document.getElementById("testElement").outerXHTML());
+            } else {
+                alert("outerXHTML(testElement):\n\n" + outerXHTML(el, true));
+            }
+            xhtmlFormatting = "none";
+			alert("unformatted outerXHTML(testElement):\n\n" + outerXHTML(el, true));
+        }
+    </script>
+    
+</head>
+
+<body>
+
+    <div id="testElement">
+        <p>Hello</p>
+        <p>World!</p>
+        Some inline text
+        <table style="background-color: White;">
+            <tr style="background-color: Gray;">
+                <td style="background-color: black; color: White;">row1,<br>
+
+                 col1</td>
+                <td>row1,<br>
+                 col2</td>
+            </tr>
+            <tr>
+                <td>row2,<br>
+                 col1</td>
+
+                <td>row2,<br>
+                 col2</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
